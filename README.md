@@ -1,6 +1,6 @@
-### MЕСТО-РЕАКТ-АВТОРИЗАЦИЯ ([Mesto-react-auth](https://krylatka2022.github.io/Mesto-react/))
+### MЕСТО-РЕАКТ-АВТОРИЗАЦИЯ ([Mesto-react-auth](https://krylatka2022.github.io/react-mesto-auth/))
 
-Данный проект является точной копией проекта **[Mesto](https://krylatka2022.github.io/Mesto/)**и **([Mesto-react](https://krylatka2022.github.io/Mesto-react/))**, его реализация выполнена на **_React_**. Дополнен проект авторизацией пользователя и валидацией полей форм input.
+Данный проект является точной копией проекта **[Mesto](https://krylatka2022.github.io/Mesto/)**и **[Mesto-react](https://krylatka2022.github.io/Mesto-react/)**, его реализация выполнена на **_React_**. Дополнен проект авторизацией пользователя и валидацией полей форм input.
 
 Это учебный проект по основам React на курсе "веб-разработчик" в Яндекс.Практикуме. Процесс выполнения данной работы состоит из нескольких двухнедельных спринтов (10-12 спринты), поэтому с каждым спринтом код меняется и дополняется.
 
@@ -38,4 +38,4 @@
 
 ### Ссылка на сайт:
 
-[Mesto-react](https://krylatka2022.github.io/Mesto-react/)
+[Mesto-react-auth](https://krylatka2022.github.io/react-mesto-auth/)
