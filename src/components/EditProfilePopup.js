@@ -20,7 +20,7 @@ function EditProfilePopup({ isOpen, onUpdateUser, onClose }) {
       setIsValid(true)
     }
   },
-    [currentUser, setValue]
+    [currentUser, setValue, isOpen]
   );
 
   function handleSubmit(e) {

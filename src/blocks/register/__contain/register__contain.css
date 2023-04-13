@@ -1,6 +1,6 @@
 .register__contain {
   align-items: center;
-  color: var(--white);
+  /* color: var(--white); */
   display: flex;
   font-family: Inter;
   font-size: 14px;
@@ -8,6 +8,5 @@
   font-weight: 400;
   justify-content: center;
   line-height: 17px;
-  margin-top: 15px;
   text-align: center;
 }

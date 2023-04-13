@@ -9,3 +9,9 @@
   text-decoration: none;
   transition: opacity 0.3s linear;
 }
+
+@media (max-width: 450px) {
+  .header__link {
+    display: none;
+  }
+}

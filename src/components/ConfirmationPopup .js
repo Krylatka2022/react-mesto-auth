@@ -1,23 +1,24 @@
-function ConfirmationPopup({card, onClose, name, title, onCardDelete}) {
+import PopupWithForm from "./PopupWithForm";
 
-    function handleDeleteClick() {
-      onCardDelete(card);
-      onClose();
-    }
-  
-    return (
-      <section className={`popup ${name} ${card && 'popup_opened'}`}>
-        <div className="popup__container">
-          <button onClick={onClose} className="popup__close popup__close_type_card-delete" type="button"></button>
-          <div className="popup__content">
-            <h2 className="popup__title">{title}</h2>
-            <form className="popup__form popup__form_type_card-delete">
-              <button onClick={handleDeleteClick} className="popup__submit-button" type="submit">Да</button>
-            </form>
-          </div>
-        </div>
-      </section>
-    );
-  };
-            
-  export default ConfirmationPopup;
+function ConfirmationPopup({ card, onClose, name, title, onCardDelete }) {
+
+  function handleDeleteSubmit(event) {
+    event.preventDefault();
+    onCardDelete(card);
+  }
+
+  return (
+    <PopupWithForm
+      onClose={onClose}
+      name={name}
+      isOpen={!!card}
+      onSubmit={handleDeleteSubmit}
+      title={title}
+      textButton="Да"
+      isValid={true}
+    >
+      <></>
+    </PopupWithForm>
+  );
+};
+export default ConfirmationPopup;

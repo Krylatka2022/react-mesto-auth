@@ -2,16 +2,12 @@ import React, { useEffect } from 'react';
 import { useFormValidation } from '../utils/useFormValidation';
 import PopupWithForm from './PopupWithForm';
 
-
 function AddPlacePopup(props) {
-
-  const { values, errors, isValid, handleChange, setValue, reset } = useFormValidation();
+  const { values, errors, isValid, handleChange, reset } = useFormValidation();
 
   useEffect(() => {
-    setValue('nameCard', props.name);
-    setValue('urlCard', props.link);
+    reset()
   }, [props.isOpen]);
-
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -43,7 +39,6 @@ function AddPlacePopup(props) {
         placeholder="Название"
         required
         onChange={handleChange}
-        // value={values['nameCard'] ?? ''}
         value={values.nameCard || ''}
         minLength='2'
         maxLength='40'
