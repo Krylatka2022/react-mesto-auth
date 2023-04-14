@@ -12,9 +12,6 @@
   .header__authorization {
     flex-direction: column;
     max-width: 126px;
-    /* overflow: hidden;
-    text-overflow: ellipsis; */
-    /* align-items: flex-end; */
     max-width: 126px;
     margin: 0 30px 0;
   }

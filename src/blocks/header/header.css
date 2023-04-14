@@ -17,18 +17,6 @@
   }
 }
 
-/* @media screen and (max-width: 700px) {
-  .header {
-    width: calc(100% - 38px);
-  }
-} */
-
-/* @media screen and (max-width: 450px) {
-  .header {
-    min-height: 85px;
-  }
-} */
-
 .header__menu-items {
   display: none;
 }

@@ -16,9 +16,8 @@ function ConfirmationPopup({ card, onClose, name, title, onCardDelete }) {
       title={title}
       textButton="Да"
       isValid={true}
-    >
-      <></>
-    </PopupWithForm>
+    />
+
   );
 };
 export default ConfirmationPopup;

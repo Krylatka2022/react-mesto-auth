@@ -99,25 +99,6 @@ function App() {
     }
   }, [navigate]);
 
-  // // Проверка токена и авторизация пользователя
-  // const checkToken = useCallback(() => {
-  //   const jwt = localStorage.getItem("jwt");
-  //   if (jwt) {
-  //     auth
-  //       .checkToken(jwt)
-  //       .then((res) => {
-  //         if (res) {
-  //           setIsLoggedIn(true);
-  //           setIsEmail(res.data.email);
-  //           navigate("/");
-  //         }
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   }
-  // }, [navigate]);
-
   const handleLogOut = () => {
     // очищаем localStorage и обновляем стейт isLoggedIn и setIsEmail
     localStorage.removeItem('jwt');

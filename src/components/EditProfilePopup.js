@@ -8,20 +8,20 @@ function EditProfilePopup({ isOpen, onUpdateUser, onClose }) {
   // Подписка на контекст
   const currentUser = useContext(CurrentUserContext);
 
-  const { values, errors, isValid, handleChange, setValue, reset, setIsValid } = useFormValidation();
+  const { values, errors, isValid, handleChange, setValue, setIsValid } = useFormValidation();
 
   // После загрузки текущего пользователя из API его данные будут использованы в управляемых компонентах.
-  useEffect(() => {
 
-    if (currentUser)
-      setValue('userName', currentUser.name)
-    setValue('userDescription', currentUser.about)
-    if (currentUser.name && currentUser.about) {
-      setIsValid(true)
+  useEffect(() => {
+    if (currentUser) {
+      setValue("userName", currentUser.name);
+      setValue("userDescription", currentUser.about);
     }
-  },
-    [currentUser, setValue, isOpen]
-  );
+    if (currentUser.name && currentUser.about) {
+      setIsValid(true);
+    }
+  }, [currentUser, setValue, isOpen]);
+
 
   function handleSubmit(e) {
     // Запрещаем браузеру переходить по адресу формы
@@ -38,7 +38,7 @@ function EditProfilePopup({ isOpen, onUpdateUser, onClose }) {
 
   const onClosePopup = () => {
     onClose()
-    reset({ 'userName': currentUser.name, 'userDescription': currentUser.about }, true)
+    // reset({ 'userName': currentUser.name, 'userDescription': currentUser.about }, true)
   }
 
   return (

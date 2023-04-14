@@ -16,7 +16,6 @@ function AddPlacePopup(props) {
       name: values.nameCard,
       link: values.urlCard,
     });
-    reset()
   }
 
   const errorClassName = (name) => `popup__error ${errors[name] ? 'popup__error_visible' : ''}`

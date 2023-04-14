@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 
 function ImagePopup({ card, onClose }) {
 	useEffect(() => {
+		if (!card) return; // не даем сработать эффекту, если невыбрана карточка еще 
 		function closePopupEscape(event) {
-			if (event.key === 'Escape') {
+			if (event.key === "Escape") {
 				onClose(event);
 			}
 		}
@@ -21,7 +22,7 @@ function ImagePopup({ card, onClose }) {
 			document.removeEventListener('keydown', closePopupEscape);
 			document.removeEventListener('click', closePopupOverlay);
 		};
-	}, [onClose]);
+	}, [onClose, card]);
 
 	return (
 		<section className={`popup popup_type_preview ${card ? 'popup_opened' : ''}`}>
